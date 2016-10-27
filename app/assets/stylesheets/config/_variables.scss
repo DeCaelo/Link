@@ -6,15 +6,24 @@
 $base-font: "Open Sans", "Helvetica", "sans-serif";
 $header-font: "Raleway", "Helvetica", "sans-serif";
 
-// Local fonts (uncomment following lines)
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "Font Name";
+// Local fonts
+@font-face {
+  font-family: "ProximaNovaRegular";
+  src: font-url('ProximaNovaRegular.eot');
+  src: font-url('ProximaNovaRegular.eot?#iefix') format('embedded-opentype'),
+       font-url('ProximaNovaRegular.woff') format('woff'),
+       font-url('ProximaNovaRegular.ttf') format('truetype')
+}
+$proxima-nova-regular: "ProximaNovaRegular";
+
+@font-face {
+  font-family: "ProximaNovaSemiBold";
+  src: font-url('ProximaNovaSemiBold.eot');
+  src: font-url('ProximaNovaSemiBold.eot?#iefix') format('embedded-opentype'),
+       font-url('ProximaNovaSemiBold.woff') format('woff'),
+       font-url('ProximaNovaSemiBold.ttf') format('truetype')
+}
+$proxima-nova-semibold: "ProximaNovaSemiBold";
 
 // Font-size and line-height
 $base-size: 16px;
@@ -27,8 +36,17 @@ $base-height: 1.4;
 $brand-color: #D23333;
 
 $red: #EE5F5B;
-$blue: #469AE0;
-$yellow: #FDB631;
+//$blue: #469AE0;
+//$yellow: #FDB631;
 $orange: #E67E22;
-$green: #32B796;
-$gray: #000000;
+//$green: #32B796;
+//$gray: #000000;
+
+//new
+
+$blue: #0058A2;
+$yellow: #E1BB00;
+$green: #01AB5D;
+$black: #1B1D1F;
+$gray: #A9A8A8;
+$light-gray: #ADAEAE;
