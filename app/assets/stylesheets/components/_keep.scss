@@ -1,0 +1,18 @@
+.toolboxItems {
+  display: table;
+}
+
+.toolboxItems li {
+  display: table-row;
+}
+
+.toolboxItems .image,
+.toolboxItems .name {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 8px;
+}
+
+.toolboxItems .name {
+  width: 150px;
+}
