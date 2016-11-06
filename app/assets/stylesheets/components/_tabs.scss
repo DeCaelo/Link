@@ -5,8 +5,14 @@
   border-left: 0px;
 }
 .nav-tabs > li.active > a {
-  color: black;
+  color: black!important;
 }
 .nav-tabs > li > a {
   color:#A9A8A8;
+}
+.down {
+  margin-bottom: -27px;
+  .nav-tabs > li.active > a {
+    background-color:transparent;
+  }
 }
