@@ -26,16 +26,16 @@
             <section>
               <div class="tabs tabs-style-linemove">
                 <nav>
-                  <ul>
-                    <li><a href="#section-linemove-1"><span><i class="fa fa-pencil" aria-hidden="true"></i>  Share an update</span></a></li>
-                    <li><a href="#section-linemove-2"><span><i class="fa fa-picture-o" aria-hidden="true"></i>  Upload a photo</li></span></a></li>
-                    <li><a href="#section-linemove-3"><span><i class="fa fa-pencil-square-o" aria-hidden="true"></i>  Write an article</span></a></li>
+                  <ul id="tabs" class="nav nav-tabs">
+                    <li class="active"><a href="#section-1" data-toggle="tab"><span><i class="fa fa-pencil" aria-hidden="true"></i>  Share an update</span></a></li>
+                    <li><a href="#section-2" data-toggle="tab"><span><i class="fa fa-picture-o" aria-hidden="true"></i>  Upload a photo</li></span></a></li>
+                    <li><a href="#section-3" data-toggle="tab"><span><i class="fa fa-pencil-square-o" aria-hidden="true"></i>  Write an article</span></a></li>
                   </ul>
                 </nav>
-                <div class="content-wrap">
-                  <section id="section-linemove-1"><p>Write something ...</p></section>
-                  <section id="section-linemove-2"><p>2</p></section>
-                  <section id="section-linemove-3"><p>3</p></section>
+                <div class="tab-content">
+                  <div class="tab-pane active" id="section-1">Write something ...</div>
+                  <div class="tab-pane" id="section-2">2</div>
+                  <div class="tab-pane" id="section-3">3</div>
                 </div>
               </div>
             </section>
@@ -88,3 +88,10 @@
       </div>
   </div>
 </div>
+
+<script>
+  $('#tabs a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  })
+</script>
