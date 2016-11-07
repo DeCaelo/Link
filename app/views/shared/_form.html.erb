@@ -1,9 +1,6 @@
 <%= simple_form_for(@post, remote: true) do |f| %>
   <div class="field">
-    <%= f.input :title, class: "form-control post_title" %>
-  </div>
-  <div class="field">
-    <%= f.input :content, class: "form-control post_content" %>
+    <%= f.input :content, placeholder: "Write something...", label: false, :input_html => {:rows => 7}, class: "form-control post_content" %>
   </div>
   <div class="field">
     <%= f.button :submit, "Submit", class: "btn btn-primary btn-sm" %>
