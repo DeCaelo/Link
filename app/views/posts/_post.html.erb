@@ -1,11 +1,23 @@
-<div class="blog-main box text-center" id="post_<%= post.id %>">
+<div class="blog-main box" id="post_<%= post.id %>">
   <div class="panel panel-info">
      <div class="panel-heading">
-        <p><%= post.content %></p>
+        <ul class="toolboxItems">
+          <li>
+          <div class="row">
+            <div class="image">
+              <img src="http://placehold.it/50x50" alt="photo user" class="mini-avatar img-responsive">
+            </div>
+            <div class="name">
+              <span>Caroline Belfort</span>
+              <div class="subtitle">Statton Oakmont</div>
+            </div>
+           </li>
+        </ul>
+        <span class="pull-right"><%= time_ago_in_words(post.created_at) %></span>
      </div>
 
      <div class="panel-body">
-      <div style="color: #3BB2D6;"><%= time_ago_in_words(post.created_at) %></div>
+      <div><%= post.content %></div>
         <br>
 
         <div class="btn-group" role="group" aria-label="...">
@@ -15,4 +27,27 @@
          <%= link_to 'Destroy', post, method: :delete, class: "btn btn-danger", remote: true %>
         </div>
    </div>
+
+  <%= form_for(post, :method => :put, remote: true) do |f| %>
+    <div class="modal fade" id="myupdatepost_<%= post.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Edit your post</h4>
+          </div>
+          <div class="modal-body">
+            <div class="field">
+              <%= f.label :content %><br>
+              <%= f.text_area :content, class: "form-control" %>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="myupdatebutton_<%= post.id %>" class="btn btn-default" data-dismiss="modal">Close</button>
+              <%= submit_tag "Update", class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
