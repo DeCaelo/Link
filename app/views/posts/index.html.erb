@@ -28,7 +28,6 @@
                 <div class="tab-content">
                   <div class="tab-pane active" id="section-1">
                     <%= render 'shared/form' %>
-
                   </div>
                   <div class="tab-pane" id="section-2">
                     <%= render 'shared/form' %>
@@ -39,6 +38,9 @@
                 </div>
               </div>
             </section>
+          </div>
+          <div class="card" id="container_posts">
+            <%= render @posts %>
           </div>
         </div>
       </div>
