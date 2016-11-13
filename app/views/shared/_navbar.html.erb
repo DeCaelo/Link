@@ -7,15 +7,17 @@
   <span id="discover">Discover</span>
   <li><a href="#"><i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
   </div>
-    <!-- Search form -->
+    <!-- Search form
     <form action="" class="navbar-wagon-search">
       <input type="text" class="navbar-wagon-search-input" placeholder="Search link">
-      <%= react_component('SearchContainer', {}, { prerender: true }) %>
+
       <button type="submit" class="navbar-wagon-search-btn">
         <i class="fa fa-search"></i>
       </button>
-    </form>
-
+    </form> -->
+      <li class="navbar-wagon-search-input">
+        <%= react_component('SearchContainer') %>
+      </li>
     <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
