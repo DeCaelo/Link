@@ -3,6 +3,7 @@ class SearchContainer extends React.Component {
     return (
       <div>
         <SearchBar />
+        <SearchResultsList />
       </div>
       );
   }
