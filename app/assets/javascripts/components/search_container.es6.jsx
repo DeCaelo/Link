@@ -9,10 +9,12 @@ class SearchContainer extends React.Component {
     this.setState({ term });
 
     $.ajax({
-      url: `/autocomplete.json/?term=${term}`,
+      url: `/api/autocomplete.json/?term=${term}`,
       method: 'GET',
-      success: (data) => { console.log(data) }
-    });
+      success: (data) => { this.setState({
+        posts: data.posts,
+        users: data.users
+      });}
   }
 
   render () {
@@ -22,7 +24,11 @@ class SearchContainer extends React.Component {
           term={this.state.term}
           onSearchTermChange={(term) => {this.search(term)}}
         />
-        <SearchResultsList />
+        <SearchResultsList
+          term={this.state.term}
+          posts={this.state.posts}
+          users={this.state.users}
+        />
       </div>
       );
   }
