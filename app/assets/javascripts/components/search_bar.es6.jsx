@@ -7,10 +7,8 @@ class SearchBar extends React.Component {
           <i className="fa fa-search"></i>
         </button>
         <input
-          onFocus={() => this.props.showDropdown()}
-          onBlur={() => this.props.hideDropdown()}
           value={this.props.term}
-          onChange={(event) => {this.handleInputChange(event.target.value)}}
+          onChange={(event) => {this.props.onSearchTermChange(event.target.value)}}
           placeholder="Search Link"
           autoComplete="off"
           type="search"
