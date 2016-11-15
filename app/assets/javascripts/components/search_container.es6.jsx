@@ -15,6 +15,7 @@ class SearchContainer extends React.Component {
         posts: data.posts,
         users: data.users
       });}
+    });
   }
 
   render () {
