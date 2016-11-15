@@ -1,3 +1,31 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.profil {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+
+.profil_header {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 12px;
+  margin-bottom: 50px;
+}
+
+
+.avatar-description {
+  text-align: center;
+  width: 100%;
+  font-size: 15px;
+  background-color: white;
+  padding: 25px 20px;
+  margin-top: 50px;
+  border-radius: 12px;
+  h5 {
+    margin-bottom: 5px;
+  }
+}
+
+.wrapper-grey {
+  min-height: calc(100vh-70px);
+}
