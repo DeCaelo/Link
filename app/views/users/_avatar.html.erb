@@ -1,0 +1,7 @@
+<div data-toggle="tooltip", title="" >
+  <% if user.avatar? %>
+    <%= cl_image_tag user.avatar.path, width: 120, height: 120, crop: :fill, class: "avatar-xlarge"%>
+  <% else %>
+    <%= image_tag "http://placehold.it/30x30", width: 120, height: 120, crop: :fill, class: "avatar-xlarge"%>
+  <% end %>
+</div>
