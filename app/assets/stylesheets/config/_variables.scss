@@ -25,6 +25,15 @@ $proxima-nova-regular: "ProximaNovaRegular";
 }
 $proxima-nova-semibold: "ProximaNovaSemiBold";
 
+@font-face {
+  font-family: "WalsheimBold";
+  src: font-url('WalsheimBold.eot');
+  src: font-url('WalsheimBold.eot?#iefix') format('embedded-opentype'),
+       font-url('WalsheimBold.woff') format('woff'),
+       font-url('WalsheimBold.ttf') format('truetype')
+}
+$walsheim-bold: "WalsheimBold";
+
 // Font-size and line-height
 $base-size: 16px;
 $base-height: 1.4;
