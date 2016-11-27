@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :posts
   get '/profile' => 'users#profile'
   resources :users, only: [ :edit, :update, :destroy ]
+  resources :profiles, only: [ :index]
 end
