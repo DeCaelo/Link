@@ -1,5 +1,5 @@
 <div class="blog-main box" id="post_<%= post.id %>">
-  <div class="panel panel-info">
+  <div class="panel panel-lighter">
      <div class="panel-heading">
         <ul class="toolboxItems">
           <li>
@@ -16,7 +16,7 @@
         <span class="pull-right"><%= time_ago_in_words(post.created_at) %></span>
      </div>
 
-     <div class="panel-body">
+     <div class="panel-table">
       <div><%= post.content %></div>
         <br>
 
