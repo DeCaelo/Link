@@ -8,3 +8,5 @@
 //= require cloudinary/jquery.cloudinary
 //= require attachinary
 //= require_tree .
+
+//= require scrollReveal.min
